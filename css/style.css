@@ -1,0 +1,189 @@
+:root {
+    --cor-primaria: #ff5722;
+    --cor-secundaria: #fff;
+    --cor-fundo: #f5f5f5;
+    --cor-texto: #222;
+    --fonte-principal: 'Segoe UI', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ALTERAÇÕES PARA FIXAR FOOTER NO FINAL DA PÁGINA */
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* FIM DAS ALTERAÇÕES */
+
+header {
+    background: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #ffd180;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: var(--cor-secundaria);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.responsive-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.features ul {
+    margin: 1rem 0 0 1.5rem;
+}
+
+.integrante {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.integrante img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--cor-primaria);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    border: none;
+    padding: 0.7rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background: #e64a19;
+}
+
+#mensagemErro {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #222;
+    color: #fff;
+    margin-top: 2rem;
+    width: 100%;
+    
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    main {
+        padding: 0.5rem;
+    }
+    .integrante {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media (min-width: 600px) {
+    main {
+        padding: 2rem;
+    }
+}
+@media (min-width: 768px) {
+    main {
+        max-width: 700px;
+    }
+}
+@media (min-width: 992px) {
+    main {
+        max-width: 900px;
+    }
+}
+@media (min-width: 1300px) {
+    main {
+        max-width: 1100px;
+    }
+}
